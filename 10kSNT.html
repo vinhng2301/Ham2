@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10000SNT</title>
+</head>
+<body>
+<p id="list-prime"></p>
+<button onclick="listPrime2()">Hien thi 10000 Số nguyên tố</button>
+
+</body>
+</html>
+<script>
+    function checkPrime(num) {
+        let n = num;
+        let i = 2;
+        if(n < 2){
+            return 0;
+        }
+        while (i <= Math.sqrt(n)){
+            if(n%i===0){
+                return 0;
+            }
+            i++;
+        }
+        return 1;
+    }
+
+    let sum = 0;
+    let primes = [];
+    let total = 0;
+
+    function listPrime2() {
+        let quantity = 10000;
+        let count = 0;
+        let n = 2;
+        let str = '';
+
+        while (count < quantity){
+            let check = checkPrime(n);
+
+            if(check){
+                primes[count] = n;
+                str+= n+',';
+                count++;
+            }
+            n++;
+        }
+        total = count;
+
+        document.getElementById('list-prime').innerHTML = str;
+    }
+
+</script>
