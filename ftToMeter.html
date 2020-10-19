@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi giữa feet và meter</title>
+</head>
+<body>
+<input type="number" id="inputLength" placeholder="Nhập chiều dài cần đổi">
+<button onclick= footToMeter()>Foot to Meter</button>
+<button onclick= meterToFoot()>Meter to Foot</button>
+<p id="outputLength"></p>
+
+</body>
+</html>
+<script>
+    function footToMeter (){
+        n = document.getElementById("inputLength").value;
+       document.getElementById("outputLength").innerHTML = 0.305 * n;
+    }
+    function meterToFoot(){
+        n = document.getElementById("inputLength").value;
+        document.getElementById("outputLength").innerHTML = 3.279 *n;
+
+    }
+</script>
